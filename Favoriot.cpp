@@ -1,6 +1,6 @@
 /*
   Favoriot.cpp - Library for Favoriot Data Stream.
-  Created by Mohamad Ariffin Zulkifli, February 2, 2020.
+  Created by Mohamad Ariffin Zulkifli, February 12, 2020.
   MIT License.
 */
 
