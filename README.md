@@ -23,9 +23,9 @@ See [examples](examples) folder.
 Declaration of `ssid`, `password` and `apikey`
 
 ```arduino
-String ssid     = "YOURWIFINAME";           // replace with your WiFi SSID
-String password = "YOURWIFIPASSWORD";       // replace with your WiFi password
-String apikey   = "YOURDEVICEACCESSTOKEN";  // replace with your Favoriot Device Access Token
+String ssid     = "YourWiFiSSID";           // replace with your WiFi SSID
+String password = "YourWiFiPassword";       // replace with your WiFi password
+String apikey   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
 ```
 ### Favoriot Class
 
