@@ -54,7 +54,6 @@ favoriot.begin(ssid, password, apikey);
 Example of data acquisition
 
 ```arduino
-// example of sensors data declaration
 byte suhu = random(22, 26);
 byte kelembapan = random(45, 55);
 ```
