@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map Favoriot
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Favoriot	    KEYWORD1
+FavoriotHTTP	KEYWORD1
+FavoriotHTTPS	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	        KEYWORD2
+deviceId	    KEYWORD2
+dataStream	    KEYWORD2
+dataStreamEnd	KEYWORD2
+dataInterval	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
