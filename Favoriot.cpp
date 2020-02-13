@@ -105,11 +105,6 @@ void FavoriotHTTP::dataStreamEnd()
   http.end();
 }
 
-void FavoriotHTTP::dataInterval(int wait)
-{
-  delay(wait);
-}
-
 FavoriotHTTPS::FavoriotHTTPS() : Favoriot()
 {
 
@@ -202,9 +197,4 @@ void FavoriotHTTPS::dataStreamEnd()
   data = "";
 
   http.end();
-}
-
-void FavoriotHTTPS::dataInterval(int wait)
-{
-  delay(wait);
 }
