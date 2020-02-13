@@ -35,6 +35,7 @@ void loop() {
   favoriot.dataStream("suhu", String(suhu));
   favoriot.dataStream("kelembapan", String(kelembapan));
   favoriot.dataStreamEnd();
-  favoriot.dataInterval(10000); // in milliseconds.
+  
+  delay(10000); // delay function as update interval.
   
 }
