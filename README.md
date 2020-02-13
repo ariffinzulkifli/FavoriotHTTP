@@ -17,11 +17,11 @@ See [examples](examples) folder.
 
 ## Favoriot Library Requirements
 
-### 1. Favoriot Device Access Token
+1. Favoriot Device Access Token
 
 How to generate `Device Access Token`, tutorial from [Favoriot](https://platform.favoriot.com/tutorial/v2/#device-access-token)
 
-### 2. Favoriot Device Developer ID
+2. Favoriot Device Developer ID
 
 Get your `Device Developer ID` from [Favoriot, Device's Page](https://platform.favoriot.com/v2/iot/devices)
 
