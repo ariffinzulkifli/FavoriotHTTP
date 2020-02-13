@@ -38,7 +38,7 @@ FavoriotHTTP favoriot;
 Using HTTPS to connect to Favoriot IoT platform
 
 ```arduino
-FavoriotHTTP favoriot;
+FavoriotHTTPS favoriot;
 ```
 
 ### Begin
