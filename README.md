@@ -15,7 +15,17 @@ See [examples](examples) folder.
 * [FavoriotHTTP.ino](examples/FavoriotHTTP/FavoriotHTTP.ino) - using `delay` function for data interval update
 * [FavoriotHTTPS.ino](examples/FavoriotHTTPS/FavoriotHTTPS.ino) - using `millis` function for data interval update
 
-## Favoriot HTTP Arduino Library
+## Favoriot Library Requirements
+
+### 1. Favoriot Device Access Token
+
+How to generate `Device Access Token`, tutorial from [Favoriot] (https://platform.favoriot.com/tutorial/v2/#device-access-token)
+
+### 2. Favoriot Device Developer ID
+
+Get your `Device Developer ID` from [Favoriot, Device's Page] (https://platform.favoriot.com/v2/iot/devices)
+
+## Favoriot Arduino Library
 
 ### Include Library and variable declaration
 
