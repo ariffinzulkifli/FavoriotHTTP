@@ -62,8 +62,8 @@ favoriot.begin(ssid, password, apikey);
 Example of data acquisition
 
 ```arduino
-byte suhu = random(22, 26);
-byte kelembapan = random(45, 55);
+byte suhu = random(22, 26);         // random function to generate value between 22-26
+byte kelembapan = random(45, 55);   // random function to generate value between 45-55
 ```
 
 Declare Favoriot Device Developer ID
