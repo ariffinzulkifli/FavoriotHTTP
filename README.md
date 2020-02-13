@@ -17,13 +17,9 @@ See [examples](examples) folder.
 
 ## Favoriot Library Requirements
 
-1. Favoriot Device Access Token
+1. Favoriot `Device Access Token`. Learn how to generate your Device Access Token on [Favoriot Documentation](https://platform.favoriot.com/tutorial/v2/#device-access-token)
 
-How to generate `Device Access Token`, tutorial from [Favoriot](https://platform.favoriot.com/tutorial/v2/#device-access-token)
-
-2. Favoriot Device Developer ID
-
-Get your `Device Developer ID` from [Favoriot, Device's Page](https://platform.favoriot.com/v2/iot/devices)
+2. Favoriot `Device Developer ID`. Get your Device Developer ID from [Favoriot, Device's Page](https://platform.favoriot.com/v2/iot/devices). e.g. `deviceDefault@username`
 
 ## Favoriot Arduino Library
 
@@ -87,9 +83,9 @@ End the sequence of Favoriot Data Stream.
 ```arduino
 favoriot.dataStreamEnd();
 ```
-Time interval updating data to Favoriot Data Stream in milliseconds.
+Time interval updating data to Favoriot Data Stream by using `delay` function.
 ```arduino
-favoriot.dataInterval(10000);
+delay(10000); // value in milliseconds
 ```
 * `10000` = 10 seconds
 
