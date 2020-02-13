@@ -15,7 +15,9 @@ String ssid     = "YourWiFiSSID";           // replace with your WiFi SSID
 String password = "YourWiFiPassword";       // replace with your WiFi password
 String apikey   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
 
-FavoriotHTTP favoriot;
+FavoriotHTTPS favoriot;
+
+unsigned long previousMillis = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -30,12 +32,15 @@ void loop() {
   byte suhu = random(22, 26);
   byte kelembapan = random(45, 55);
 
-  // STEP 3 - Send data to Favoriot Data Stream
-  favoriot.deviceId("YourDeviceDeveloperId");
-  favoriot.dataStream("suhu", String(suhu));
-  favoriot.dataStream("kelembapan", String(kelembapan));
-  favoriot.dataStreamEnd();
-  
-  delay(10000); // update data interval to Favoriot Data Stream using delay function
-  
+  // update data interval to Favoriot Data Stream using millis function
+  if(millis() - previousMillis > 10000){
+    previousMillis = millis();
+
+    // STEP 3 - Send data to Favoriot Data Stream
+    favoriot.deviceId("YourDeviceDeveloperId");
+    favoriot.dataStream("suhu", String(suhu));
+    favoriot.dataStream("kelembapan", String(kelembapan));
+    favoriot.dataStreamEnd();
+
+  }
 }
