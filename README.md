@@ -12,6 +12,8 @@ This moment, the library support any [Arduino-ESP8266](https://github.com/esp826
 ## Example Sketch
 
 See [examples](examples) folder.
+* [FavoriotHTTP.ino](examples/FavoriotHTTP/FavoriotHTTP.ino) - using `delay` function for data interval update
+* [FavoriotHTTPS.ino](examples/FavoriotHTTPS/FavoriotHTTPS.ino) - using `millis` function for data interval update
 
 ## Favoriot HTTP Arduino Library
 
