@@ -22,7 +22,6 @@ class FavoriotHTTP : public Favoriot
     virtual void deviceId(String key);
     virtual void dataStream(String key, String value);
     virtual void dataStreamEnd();
-    virtual void dataInterval(int wait);
   private:
     String _key;
     String ssid;
@@ -38,7 +37,6 @@ class FavoriotHTTPS : public Favoriot
     virtual void deviceId(String key);
     virtual void dataStream(String key, String value);
     virtual void dataStreamEnd();
-    virtual void dataInterval(int wait);
   private:
     String _key;
     String ssid;
