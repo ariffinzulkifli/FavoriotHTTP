@@ -7,6 +7,9 @@
 * 2. Sensors reading for data acquisition
 * 3. Send data to Favoriot Data Stream
 * 
+* Please select ESP8266 Boards before compiling the sketch
+* (example) Go to menu, Tools > Board > NodeMCU 1.0 (ESP-12E Module)
+*
 */
 
 #include <Favoriot.h>
