@@ -25,9 +25,18 @@ See [examples](examples) folder.
 
 ### Include Library and variable declaration
 
+Using HTTP to connect to Favoriot IoT platform
+
 ```arduino
-#include <Favoriot.h>
+#include <FavoriotHTTP.h>;
 ```
+
+Using HTTPS to connect to Favoriot IoT platform
+
+```arduino
+#include <FavoriotHTTPS.h>;
+```
+
 Declaration of `ssid`, `password` and `apikey`
 
 ```arduino
@@ -37,13 +46,9 @@ char apikey[]   = "YourDeviceAccessToken";  // replace with your Favoriot Device
 ```
 ### Favoriot Class
 
-Using HTTP to connect to Favoriot IoT platform
-
 ```arduino
 FavoriotHTTP favoriot;
 ```
-
-Using HTTPS to connect to Favoriot IoT platform
 
 ```arduino
 FavoriotHTTPS favoriot;
