@@ -14,9 +14,9 @@
 
 #include <Favoriot.h>
 
-String ssid     = "YourWiFiSSID";           // replace with your WiFi SSID
-String password = "YourWiFiPassword";       // replace with your WiFi password
-String apikey   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
+char ssid[]     = "YourWiFiSSID";           // replace with your WiFi SSID
+char password[] = "YourWiFiPassword";       // replace with your WiFi password
+char apikey[]   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
 
 FavoriotHTTPS favoriot;
 

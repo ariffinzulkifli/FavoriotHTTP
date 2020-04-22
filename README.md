@@ -31,9 +31,9 @@ See [examples](examples) folder.
 Declaration of `ssid`, `password` and `apikey`
 
 ```arduino
-String ssid     = "YourWiFiSSID";           // replace with your WiFi SSID
-String password = "YourWiFiPassword";       // replace with your WiFi password
-String apikey   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
+char ssid[]     = "YourWiFiSSID";           // replace with your WiFi SSID
+char password[] = "YourWiFiPassword";       // replace with your WiFi password
+char apikey[]   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
 ```
 ### Favoriot Class
 
@@ -69,7 +69,7 @@ byte kelembapan = random(45, 55);   // random function to generate value between
 Declare Favoriot Device Developer ID
 
 ```arduino
-favoriot.deviceId("DeviceDeveloperId");
+favoriot.deviceId("YourDeviceDeveloperId");
 ```
 Start the sequence of Favoriot Data Stream with declared data. 
 
@@ -86,6 +86,20 @@ favoriot.dataStreamEnd();
 Time interval updating data to Favoriot Data Stream by using `delay` function.
 ```arduino
 delay(10000); // value in milliseconds
+```
+* `10000` = 10 seconds
+
+Time interval updating data to Favoriot Data Stream by using `millis` function.
+```arduino
+if(millis() - previousMillis > 10000){
+    previousMillis = millis();
+
+    favoriot.deviceId("YourDeviceDeveloperId");
+    favoriot.dataStream("suhu", String(suhu));
+    favoriot.dataStream("kelembapan", String(kelembapan));
+    favoriot.dataStreamEnd();
+
+  }
 ```
 * `10000` = 10 seconds
 
