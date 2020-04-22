@@ -6,9 +6,9 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Favoriot	    KEYWORD1
 FavoriotHTTP	KEYWORD1
 FavoriotHTTPS	KEYWORD1
+FavoriotMQTT	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -16,7 +16,7 @@ FavoriotHTTPS	KEYWORD1
 
 begin	        KEYWORD2
 deviceId	    KEYWORD2
-dataStream	  KEYWORD2
+dataStream	    KEYWORD2
 dataStreamEnd	KEYWORD2
 dataInterval	KEYWORD2
 

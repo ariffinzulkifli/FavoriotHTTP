@@ -12,11 +12,11 @@
 *
 */
 
-#include <Favoriot.h>
+#include <FavoriotHTTPS.h>
 
-char ssid[]     = "YourWiFiSSID";           // replace with your WiFi SSID
-char password[] = "YourWiFiPassword";       // replace with your WiFi password
-char apikey[]   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
+const char ssid[]     = "YourWiFiSSID";           // replace with your WiFi SSID
+const char password[] = "YourWiFiPassword";       // replace with your WiFi password
+const char apikey[]   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
 
 FavoriotHTTPS favoriot;
 
