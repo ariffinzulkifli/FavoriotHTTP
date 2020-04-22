@@ -12,8 +12,8 @@ This moment, the library support any [Arduino-ESP32](https://github.com/espressi
 ## Example Sketch
 
 See [examples](examples) folder.
-* [FavoriotHTTP.ino](examples/FavoriotHTTP/FavoriotHTTP.ino) - using `delay` function for data interval update
-* [FavoriotHTTPS.ino](examples/FavoriotHTTPS/FavoriotHTTPS.ino) - using `millis` function for data interval update
+* [FavoriotHTTP.ino](examples/FavoriotHTTP/FavoriotHTTP.ino) - example sketch to update data to Favoriot Data Stream via HTTP, using `delay` function for data interval update.
+* [FavoriotHTTPS.ino](examples/FavoriotHTTPS/FavoriotHTTPS.ino) - example sketch to update data to Favoriot Data Stream via HTTPS, using `millis` function for data interval update.
 
 ## Favoriot Library Requirements
 
@@ -28,13 +28,13 @@ See [examples](examples) folder.
 Using HTTP to connect to Favoriot IoT platform
 
 ```arduino
-#include <FavoriotHTTP.h>;
+#include <FavoriotHTTP.h>
 ```
 
 Using HTTPS to connect to Favoriot IoT platform
 
 ```arduino
-#include <FavoriotHTTPS.h>;
+#include <FavoriotHTTPS.h>
 ```
 
 Declaration of `ssid`, `password` and `apikey`
