@@ -6,15 +6,13 @@
 
 #include "Arduino.h"
 #include "Favoriot.h"
-#include "ESP8266WiFi.h"
-#include "ESP8266HTTPClient.h"
 
 FavoriotHTTP::FavoriotHTTP() : Favoriot()
 {
   
 }
 
-void FavoriotHTTP::begin(String ssid, String password, String key)
+void FavoriotHTTP::begin(const char* ssid, const char* password, const char* key)
 {
   _key = key;
 
@@ -59,20 +57,20 @@ void FavoriotHTTP::begin(String ssid, String password, String key)
   http.end();
 }
 
-void FavoriotHTTP::deviceId(String id)
+void FavoriotHTTP::deviceId(const char* id)
 {
-  String json = "{\"device_developer_id\":\"" + id + "\",\"data\":{";
+  String json = "{\"device_developer_id\":\"" + String(id) + "\",\"data\":{";
   data += json;
 
   Serial.println("Generated Data =====================================");
 }
 
-void FavoriotHTTP::dataStream(String jKey, String jValue)
+void FavoriotHTTP::dataStream(const char* jKey, String jValue)
 {
-  String json = "\"" + jKey + "\":\"" + jValue + "\",";
+  String json = "\"" + String(jKey) + "\":\"" + jValue + "\",";
   data += json;
 
-  Serial.println("  " + jKey +": " + jValue);
+  Serial.println("  " + String(jKey) +": " + jValue);
 }
 
 void FavoriotHTTP::dataStreamEnd()
