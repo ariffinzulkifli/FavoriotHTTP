@@ -4,7 +4,7 @@ An [Arduino](https://arduino.cc/) library update sensors data to [Favoriot](http
 
 ## Compatible Hardware
 
-This moment, the library support any [Arduino-ESP8266](https://github.com/esp8266/Arduino) development boards such as:
+This moment, the library support any [Arduino-ESP32](https://github.com/espressif/arduino-esp32) and [Arduino-ESP8266](https://github.com/esp8266/Arduino) development boards such as:
 * [ESP8266 ESP-01](https://www.myduino.com/index.php?route=product/product&product_id=712)
 * [ESP8266 NodeMCU](https://www.myduino.com/index.php?route=product/product&product_id=920)
 * [Myduino IoT Training Kit](https://www.myduino.com/index.php?route=product/product&product_id=1004)
