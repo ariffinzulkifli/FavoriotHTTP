@@ -37,6 +37,7 @@ void loop() {
   favoriot.deviceId("YourDeviceDeveloperId");
   favoriot.dataStream("suhu", String(suhu));
   favoriot.dataStream("kelembapan", String(kelembapan));
+  // add other dataStream as you wish
   favoriot.dataStreamEnd();
   
   delay(10000); // update data interval to Favoriot Data Stream using delay function
