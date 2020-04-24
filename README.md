@@ -1,4 +1,4 @@
-# Favoriot
+# FavoriotHTTP Arduino Library
 
 An [Arduino](https://arduino.cc/) library update sensors data to [Favoriot](https://platform.favoriot.com/v2/signup/FAVO7245IFBK) Data Stream using HTTP REST API.
 
