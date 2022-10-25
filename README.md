@@ -1,6 +1,6 @@
 # FavoriotHTTP Arduino Library
 
-An [Arduino](https://arduino.cc/) library for ESP8266 and ESP32 to update sensors data to [Favoriot's](https://platform.favoriot.com/) data stream using both HTTP and Secure HTTP REST API.
+A simple [Arduino](https://arduino.cc/) library for ESP8266 and ESP32 to update sensors data to [Favoriot's](https://platform.favoriot.com/) IoT platform. Support both HTTP and Secure HTTPS connection.
 
 ## Compatible Hardware
 
