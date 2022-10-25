@@ -18,7 +18,6 @@ begin	        KEYWORD2
 deviceId	    KEYWORD2
 dataStream	    KEYWORD2
 dataStreamEnd	KEYWORD2
-dataInterval	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
