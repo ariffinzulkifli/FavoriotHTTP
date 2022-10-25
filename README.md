@@ -1,10 +1,10 @@
 # FavoriotHTTP Arduino Library
 
-An [Arduino](https://arduino.cc/) library update sensors data to [Favoriot](https://platform.favoriot.com/v2/signup/FAVO7245IFBK) Data Stream using HTTP REST API.
+An [Arduino](https://arduino.cc/) library for ESP8266 and ESP32 to update sensors data to [Favoriot's](https://platform.favoriot.com/) data stream using both HTTP and Secure HTTP REST API.
 
 ## Compatible Hardware
 
-This moment, the library support any [Arduino-ESP32](https://github.com/espressif/arduino-esp32) and [Arduino-ESP8266](https://github.com/esp8266/Arduino) development boards such as:
+At them moment, the library support any [Arduino-ESP32](https://github.com/espressif/arduino-esp32) and [Arduino-ESP8266](https://github.com/esp8266/Arduino) development boards such as:
 * [ESP8266 ESP-01](https://www.myduino.com/index.php?route=product/product&product_id=712)
 * [ESP8266 NodeMCU](https://www.myduino.com/index.php?route=product/product&product_id=920)
 * [Myduino IoT Training Kit](https://www.myduino.com/index.php?route=product/product&product_id=1004)
@@ -12,8 +12,8 @@ This moment, the library support any [Arduino-ESP32](https://github.com/espressi
 ## Example Sketch
 
 See [examples](examples) folder.
-* [FavoriotHTTP.ino](examples/FavoriotHTTP/FavoriotHTTP.ino) - example sketch to update data to Favoriot Data Stream via HTTP, using `delay` function for data interval update.
-* [FavoriotHTTPS.ino](examples/FavoriotHTTPS/FavoriotHTTPS.ino) - example sketch to update data to Favoriot Data Stream via HTTPS, using `millis` function for data interval update.
+* [FavoriotHTTP.ino](examples/FavoriotHTTP/FavoriotHTTP.ino)
+* [FavoriotHTTPS.ino](examples/FavoriotHTTPS/FavoriotHTTPS.ino)
 
 ## Favoriot Library Requirements
 
@@ -25,30 +25,29 @@ See [examples](examples) folder.
 
 ### Include Library and variable declaration
 
-Using HTTP to connect to Favoriot IoT platform
+A library to rule HTTP and HTTPS connection to Favoriot's data stream.
 
 ```arduino
 #include <FavoriotHTTP.h>
 ```
 
-Using HTTPS to connect to Favoriot IoT platform
+Declaration of `ssid`, `password` , `deviceAccessToken` and `deviceDeveloperId`
 
 ```arduino
-#include <FavoriotHTTPS.h>
-```
-
-Declaration of `ssid`, `password` and `apikey`
-
-```arduino
-char ssid[]     = "YourWiFiSSID";           // replace with your WiFi SSID
-char password[] = "YourWiFiPassword";       // replace with your WiFi password
-char apikey[]   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
+char ssid[]     = "YourWiFiSSID"; // replace with your WiFi SSID
+char password[] = "YourWiFiPassword"; // replace with your WiFi password
+const char deviceDeveloperId[]  = "YourDeviceDeveloperId";  // replace with your Favoriot Device Developer ID
+char deviceAccessToken[]   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
 ```
 ### Favoriot Class
+
+Class for HTTP connection.
 
 ```arduino
 FavoriotHTTP favoriot;
 ```
+
+Class for Secure HTTPS connection.
 
 ```arduino
 FavoriotHTTPS favoriot;
@@ -59,7 +58,7 @@ FavoriotHTTPS favoriot;
 Initialized connection to Favoriot IoT platform
 
 ```arduino
-favoriot.begin(ssid, password, apikey); 
+favoriot.begin(ssid, password, deviceAccessToken); 
 ```
 
 ### Update sensors data to Favoriot Data Stream
@@ -74,7 +73,7 @@ byte kelembapan = random(45, 55);   // random function to generate value between
 Declare Favoriot Device Developer ID
 
 ```arduino
-favoriot.deviceId("YourDeviceDeveloperId");
+favoriot.deviceId(deviceDeveloperId);
 ```
 Start the sequence of Favoriot Data Stream with declared data. 
 
@@ -88,18 +87,13 @@ End the sequence of Favoriot Data Stream.
 ```arduino
 favoriot.dataStreamEnd();
 ```
-Time interval updating data to Favoriot Data Stream by using `delay` function.
-```arduino
-delay(10000); // value in milliseconds
-```
-* `10000` = 10 seconds
 
 Time interval updating data to Favoriot Data Stream by using `millis` function.
 ```arduino
 if(millis() - previousMillis > 10000){
     previousMillis = millis();
 
-    favoriot.deviceId("YourDeviceDeveloperId");
+    favoriot.deviceId(deviceDeveloperId);
     favoriot.dataStream("suhu", String(suhu));
     favoriot.dataStream("kelembapan", String(kelembapan));
     favoriot.dataStreamEnd();
