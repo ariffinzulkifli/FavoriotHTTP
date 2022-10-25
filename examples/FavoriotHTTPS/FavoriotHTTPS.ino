@@ -3,48 +3,53 @@
 * Organization: Myinvent Technologies Sdn Bhd
 *
 * This sketch has 3 execution steps:
-* 1. Initialized Favoriot connectivity
-* 2. Sensors reading for data acquisition
-* 3. Send data to Favoriot Data Stream
-* 
-* Please select ESP32/ESP8266 Boards before compiling the sketch
-* (example) Go to menu, Tools > Board > ESP32 Arduino or ESP8266 Boards
+* 1. Initialized Wi-Fi and IoT platform conectivity (Favoriot)
+* 2. Data Acquisition - Read data from the sensors
+* 3. Data Ingestion - Send data to Favoriot's data stream
 *
+* Please select ESP8266/ESP32 Boards before compiling the sketch
+* (example) Go to menu, Tools > Board > ESP8266 Boards or ESP32 Arduino
+*
+* Favoriot's HTTP Secure Certificate Validity Expires On:
+* Saturday, 27 May 2023 at 14:17:12
+* 
 */
 
-#include <FavoriotHTTPS.h>
+#include <FavoriotHTTP.h>
 
-const char ssid[]     = "YourWiFiSSID";           // replace with your WiFi SSID
-const char password[] = "YourWiFiPassword";       // replace with your WiFi password
-const char apikey[]   = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
+const char ssid[] = "YourWiFiSSID"; // replace with your WiFi SSID
+const char password[] = "YourWiFiPassword"; // replace with your WiFi password
+const char deviceDeveloperId[]  = "YourDeviceDeveloperId";  // replace with your Favoriot Device Developer ID
+const char deviceAccessToken[]  = "YourDeviceAccessToken";  // replace with your Favoriot Device Access Token
 
 FavoriotHTTPS favoriot;
 
-unsigned long previousMillis = 0;
+unsigned long previousDataIngestion = 0;
+unsigned long dataIngestionInterval = 10000;
 
 void setup() {
   Serial.begin(9600);
 
-  // STEP 1 - Initialized Favoriot connectivity
-  favoriot.begin(ssid, password, apikey);
+  // STEP 1 - Initialized Wi-Fi and IoT platform conectivity
+  favoriot.begin(ssid, password, deviceAccessToken);
 }
 
 void loop() {
   
-  // STEP 2 - Sensors reading for data acquisition
+  // STEP 2 - Read data from the sensors
   byte suhu = random(22, 26);
   byte kelembapan = random(45, 55);
 
-  // update data interval to Favoriot Data Stream using millis function
-  if(millis() - previousMillis > 10000){
-    previousMillis = millis();
+  // STEP 3 - Send data to Favoriot's data stream
+  // data ingestion interval is 10 seconds
+  if(millis() - previousDataIngestion > dataIngestionInterval){
+    previousDataIngestion = millis();
 
-    // STEP 3 - Send data to Favoriot Data Stream
-    favoriot.deviceId("YourDeviceDeveloperId");
+    favoriot.deviceId(deviceDeveloperId);
     favoriot.dataStream("suhu", String(suhu));
     favoriot.dataStream("kelembapan", String(kelembapan));
     // add other dataStream as you wish
     favoriot.dataStreamEnd();
-
   }
+  
 }
