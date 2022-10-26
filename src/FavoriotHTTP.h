@@ -14,7 +14,7 @@
 #include <ESP8266HTTPClient.h>
 #include <WiFiClientSecureBearSSL.h>
 
-#elif ESP32
+#elif ESP32 || RP2040
 #include <WiFi.h>
 #include <HTTPClient.h>
 
