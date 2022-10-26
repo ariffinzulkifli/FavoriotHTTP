@@ -1,15 +1,20 @@
 # FavoriotHTTP Arduino Library
 
-A simple [Arduino](https://arduino.cc/) library for ESP8266 and ESP32 to update sensors data to [Favoriot's](https://platform.favoriot.com/) IoT platform. Support both HTTP and Secure HTTPS connection.
+A simple [Arduino](https://arduino.cc/) library for ESP8266, ESP32 microcontrollers and Raspberry Pi Pico W to update sensors data to [Favoriot's](https://platform.favoriot.com/) IoT platform.
+
+Support both HTTP and Secure HTTPS connection.
+
+Alert: Currently, the secure HTTPS connection for Raspberry Pico W is unstable. If you want to make stable secure HTTPS connection with Raspberry Pico W, it would better to program the RP2040 using [Circuitpython](https://circuitpython.org/board/raspberry_pi_pico_w/).
 
 ## Compatible Hardware
 
-At them moment, the library support any [Arduino-ESP32](https://github.com/espressif/arduino-esp32) and [Arduino-ESP8266](https://github.com/esp8266/Arduino) development boards such as:
+At them moment, the library support any [Arduino-ESP32](https://github.com/espressif/arduino-esp32) and [Arduino-ESP8266](https://github.com/esp8266/Arduino) and [Arduino-Pico-W](https://github.com/earlephilhower/arduino-pico) development boards such as:
 * [ESP8266 ESP-01](https://myduino.com/product/key-098/)
 * [ESP8266 NodeMCU](https://myduino.com/product/jhs-031/)
 * [Myduino IoT Training Kit](https://myduino.com/product/myd-002/)
 * [ESP32 NodeMCU](https://shopee.com.my/NodeMCU-ESP32-Arduino-Micropython-WiFi-Bluetooth-Development-Board-CP2102-USB-Driver-i.132184430.8469749720)
 * [Hibiscus Sense](https://myduino.com/product/myd-036/)
+* [Raspberry Pi Pico W](https://my.cytron.io/p-raspberry-pi-pico-wireless-board-smd-presoldered-headers)
 
 ## Example Sketch
 
