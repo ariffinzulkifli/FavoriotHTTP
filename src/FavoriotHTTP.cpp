@@ -7,7 +7,7 @@
 #include "Arduino.h"
 #include "FavoriotHTTP.h"
 
-#if ESP32 || RP2040
+#if ESP32 || ARDUINO_ARCH_RP2040
 #include <FavoriotRootCA.h>
 #endif
 
@@ -38,8 +38,8 @@ void FavoriotHTTP::begin(const char* ssid, const char* password, const char* key
   String controller = "ESP8266";
   #elif ESP32
   String controller = "ESP32";
-  #elif RP2040
-  String controller = "RP2040";
+  #elif ARDUINO_ARCH_RP2040
+  String controller = "Raspberry Pi Pico";
   #endif
   
   Serial.println();
@@ -80,7 +80,7 @@ void FavoriotHTTP::begin(const char* ssid, const char* password, const char* key
 
   https.end();
 
-  #elif ESP32 || RP2040
+  #elif ESP32 || ARDUINO_ARCH_RP2040
   WiFiClientSecure *clientBegin = new WiFiClientSecure;
 
   if(clientBegin) {
@@ -153,7 +153,7 @@ void FavoriotHTTP::dataStreamEnd()
 
   http.begin(client, "http://apiv2.favoriot.com/v2/streams");
 
-  #elif ESP32 || RP2040
+  #elif ESP32 || ARDUINO_ARCH_RP2040
   HTTPClient http;
 
   http.begin("http://apiv2.favoriot.com/v2/streams");
@@ -210,8 +210,8 @@ void FavoriotHTTPS::begin(const char* ssid, const char* password, const char* ke
   String controller = "ESP8266";
   #elif ESP32
   String controller = "ESP32";
-  #elif RP2040
-  String controller = "RP2040";
+  #elif ARDUINO_ARCH_RP2040
+  String controller = "Raspberry Pi Pico";
   #endif
   
   Serial.println();
@@ -251,7 +251,7 @@ void FavoriotHTTPS::begin(const char* ssid, const char* password, const char* ke
 
   https.end();
 
-  #elif ESP32 || RP2040
+  #elif ESP32 || ARDUINO_ARCH_RP2040
   WiFiClientSecure *clientBegin = new WiFiClientSecure;
 
   if(clientBegin) {
@@ -346,7 +346,7 @@ void FavoriotHTTPS::dataStreamEnd()
 
   https.end();
 
-  #elif ESP32 || RP2040
+  #elif ESP32 || ARDUINO_ARCH_RP2040
   WiFiClientSecure *client = new WiFiClientSecure;
   
   if(client) {
