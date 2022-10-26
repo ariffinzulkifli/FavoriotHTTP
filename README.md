@@ -5,9 +5,11 @@ A simple [Arduino](https://arduino.cc/) library for ESP8266 and ESP32 to update 
 ## Compatible Hardware
 
 At them moment, the library support any [Arduino-ESP32](https://github.com/espressif/arduino-esp32) and [Arduino-ESP8266](https://github.com/esp8266/Arduino) development boards such as:
-* [ESP8266 ESP-01](https://www.myduino.com/index.php?route=product/product&product_id=712)
-* [ESP8266 NodeMCU](https://www.myduino.com/index.php?route=product/product&product_id=920)
-* [Myduino IoT Training Kit](https://www.myduino.com/index.php?route=product/product&product_id=1004)
+* [ESP8266 ESP-01](https://myduino.com/product/key-098/)
+* [ESP8266 NodeMCU](https://myduino.com/product/jhs-031/)
+* [Myduino IoT Training Kit](https://myduino.com/product/myd-002/)
+* [ESP32 NodeMCU](https://shopee.com.my/NodeMCU-ESP32-Arduino-Micropython-WiFi-Bluetooth-Development-Board-CP2102-USB-Driver-i.132184430.8469749720)
+* [Hibiscus Sense](https://myduino.com/product/myd-036/)
 
 ## Example Sketch
 
