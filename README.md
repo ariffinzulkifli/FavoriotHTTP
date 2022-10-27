@@ -16,7 +16,7 @@ ariffin@myduino.com
 
 # FavoriotHTTP Arduino Library
 
-A simple [Arduino](https://arduino.cc/) library for ESP8266, ESP32 microcontrollers and Raspberry Pi Pico W to update sensors data to [Favoriot's](https://platform.favoriot.com/) IoT platform.
+A simple [Arduino](https://arduino.cc/) library for ESP8266, ESP32 and RP2040 (Raspberry Pi Pico W) microcontrollers and to update sensors data to [Favoriot's](https://platform.favoriot.com/) IoT platform.
 
 Support both HTTP and Secure HTTPS connection.
 
